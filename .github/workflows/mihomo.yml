@@ -5,9 +5,6 @@ on:
     paths:
       - "*.ini"
       - tools/**
-  schedule:
-    # rules.yaml 在 openclash-rules 仓库，每天同步一次
-    - cron: "0 20 * * *"
   workflow_dispatch:
 
 permissions:
@@ -21,9 +18,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: curl -fsSL https://raw.githubusercontent.com/zhangchedan000/openclash-rules/main/rules.yaml -o /tmp/rules.yaml
       - run: python tools/ini2mihomo.py Custom_Clash_Full.ini
-      - run: python tools/ini2shadowrocket.py Custom_Clash_Full.ini /tmp/rules.yaml
+      - run: python tools/ini2shadowrocket.py Custom_Clash_Full.ini
       - name: 提交生成的配置
         run: |
           git config user.name "github-actions[bot]"
