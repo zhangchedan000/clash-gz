@@ -33,7 +33,7 @@ TYPES = {
 
 GENERAL = """[general]
 network_check_url=http://www.gstatic.com/generate_204
-server_check_url=https://cp.cloudflare.com/generate_204
+server_check_url=http://cp.cloudflare.com/generate_204
 server_check_timeout=3000
 excluded_routes=10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.168.0.0/16, 224.0.0.0/4, 239.255.255.250/32, 255.255.255.255/32
 udp_whitelist=1-442, 444-65535
