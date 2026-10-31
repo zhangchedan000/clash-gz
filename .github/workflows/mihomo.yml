@@ -1,10 +1,13 @@
-name: 生成 mihomo 配置
+name: 生成 mihomo / 小火箭配置
 
 on:
   push:
     paths:
       - "*.ini"
-      - tools/ini2mihomo.py
+      - tools/**
+  schedule:
+    # rules.yaml 在 openclash-rules 仓库，每天同步一次
+    - cron: "0 20 * * *"
   workflow_dispatch:
 
 permissions:
@@ -18,13 +21,18 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - run: curl -fsSL https://raw.githubusercontent.com/zhangchedan000/openclash-rules/main/rules.yaml -o /tmp/rules.yaml
       - run: python tools/ini2mihomo.py Custom_Clash_Full.ini
+      - run: python tools/ini2shadowrocket.py Custom_Clash_Full.ini /tmp/rules.yaml
       - name: 提交生成的配置
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add Custom_Clash_Full.mihomo.yaml
-          git diff --cached --quiet || git commit -m "自动生成 Custom_Clash_Full.mihomo.yaml"
+          git add Custom_Clash_Full.mihomo.yaml Custom_Clash_Full.shadowrocket.conf
+          git diff --cached --quiet || git commit -m "自动生成 mihomo / 小火箭配置"
           git push
       - name: 刷新 jsDelivr 缓存
-        run: curl -s "https://purge.jsdelivr.net/gh/${{ github.repository }}@main/Custom_Clash_Full.mihomo.yaml" || true
+        run: |
+          for f in Custom_Clash_Full.mihomo.yaml Custom_Clash_Full.shadowrocket.conf; do
+            curl -s "https://purge.jsdelivr.net/gh/${{ github.repository }}@main/$f" || true
+          done
