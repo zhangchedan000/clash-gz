@@ -133,9 +133,10 @@ def convert(text):
     # FINAL 必须在最后
     local.sort(key=lambda r: r.startswith("FINAL"))
     out = [GENERAL, "[policy]"] + [policy_line(g) for g in groups]
-    out += ["", "[server_remote]", "", "[filter_remote]"] + deduped
+    # 圈X要求这些段落都存在，空的也要写上
+    out += ["", "[server_local]", "", "[server_remote]", "", "[filter_remote]"] + deduped
     out += ["", "[filter_local]"] + local
-    out += ["", "[rewrite_remote]", "", "[rewrite_local]", "", "[mitm]", ""]
+    out += ["", "[rewrite_remote]", "", "[rewrite_local]", "", "[task_local]", "", "[http_backend]", "", "[mitm]", ""]
     return "\n".join(out), len(groups), len(deduped), warnings
 
 
