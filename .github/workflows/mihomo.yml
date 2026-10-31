@@ -1,10 +1,13 @@
-name: 生成 mihomo / 小火箭配置
+name: 生成 mihomo / 小火箭 / 圈X配置
 
 on:
   push:
     paths:
       - "*.ini"
       - tools/**
+  schedule:
+    # ini 引用的远程规则（Aethersailor 的 .list）每天同步一次给圈X
+    - cron: "0 20 * * *"
   workflow_dispatch:
 
 permissions:
@@ -20,15 +23,16 @@ jobs:
           python-version: "3.12"
       - run: python tools/ini2mihomo.py Custom_Clash_Full.ini
       - run: python tools/ini2shadowrocket.py Custom_Clash_Full.ini
+      - run: python tools/ini2quantumultx.py Custom_Clash_Full.ini
       - name: 提交生成的配置
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add Custom_Clash_Full.mihomo.yaml Custom_Clash_Full.shadowrocket.conf
-          git diff --cached --quiet || git commit -m "自动生成 mihomo / 小火箭配置"
+          git add Custom_Clash_Full.mihomo.yaml Custom_Clash_Full.shadowrocket.conf Custom_Clash_Full.quantumultx.conf qx
+          git diff --cached --quiet || git commit -m "自动生成 mihomo / 小火箭 / 圈X配置"
           git push
       - name: 刷新 jsDelivr 缓存
         run: |
-          for f in Custom_Clash_Full.mihomo.yaml Custom_Clash_Full.shadowrocket.conf; do
+          for f in Custom_Clash_Full.mihomo.yaml Custom_Clash_Full.shadowrocket.conf Custom_Clash_Full.quantumultx.conf qx/Custom_Direct.list qx/Custom_Proxy.list qx/Steam_CDN.list qx/talkatone.list; do
             curl -s "https://purge.jsdelivr.net/gh/${{ github.repository }}@main/$f" || true
           done
