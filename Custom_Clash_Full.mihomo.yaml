@@ -1,0 +1,327 @@
+# 由 Custom_Clash_Full.ini 自动生成（tools/ini2mihomo.py），不要手改；节点由 Sub-Store 注入
+
+proxy-groups:
+  - name: "🚀 手动选择"
+    type: select
+    proxies: ["♻️ 自动选择", "🇭🇰 香港节点", "🇺🇸 美国节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇼🇸 台湾节点", "🇰🇷 韩国节点", "🇨🇦 加拿大节点", "🇬🇧 英国节点", "🇫🇷 法国节点", "🇩🇪 德国节点", "🇳🇱 荷兰节点", "🇹🇷 土耳其节点", "🏠 家宽节点", "🌐 其他地区"]
+    include-all: true
+  - name: "♻️ 自动选择"
+    type: url-test
+    include-all: true
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 300
+    tolerance: 50
+  - name: "💬 即时通讯"
+    type: select
+    proxies: ["♻️ 自动选择", "🇭🇰 香港节点", "🇺🇸 美国节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇼🇸 台湾节点", "🇰🇷 韩国节点", "🇨🇦 加拿大节点", "🇬🇧 英国节点", "🇫🇷 法国节点", "🇩🇪 德国节点", "🇳🇱 荷兰节点", "🇹🇷 土耳其节点", "🏠 家宽节点", "🌐 其他地区", "🚀 手动选择"]
+    include-all: true
+  - name: "🌐 社交媒体"
+    type: select
+    proxies: ["🇭🇰 香港节点", "🇺🇸 美国节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇼🇸 台湾节点", "🇰🇷 韩国节点", "🇨🇦 加拿大节点", "🇬🇧 英国节点", "🇫🇷 法国节点", "🇩🇪 德国节点", "🇳🇱 荷兰节点", "🇹🇷 土耳其节点", "🏠 家宽节点", "🌐 其他地区", "🚀 手动选择", "♻️ 自动选择"]
+    include-all: true
+  - name: "📞 Talkatone"
+    type: select
+    proxies: ["🇭🇰 香港节点", "🇺🇸 美国节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇼🇸 台湾节点", "🇰🇷 韩国节点", "🇨🇦 加拿大节点", "🇬🇧 英国节点", "🇫🇷 法国节点", "🇩🇪 德国节点", "🇳🇱 荷兰节点", "🇹🇷 土耳其节点", "🏠 家宽节点", "🌐 其他地区", "🚀 手动选择", "♻️ 自动选择", "🎯 全球直连"]
+    include-all: true
+  - name: "🚀 GitHub"
+    type: select
+    proxies: ["🇭🇰 香港节点", "🇺🇸 美国节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇼🇸 台湾节点", "🇰🇷 韩国节点", "🇨🇦 加拿大节点", "🇬🇧 英国节点", "🇫🇷 法国节点", "🇩🇪 德国节点", "🇳🇱 荷兰节点", "🇹🇷 土耳其节点", "🏠 家宽节点", "🌐 其他地区", "🚀 手动选择", "♻️ 自动选择", "🎯 全球直连"]
+    include-all: true
+  - name: "🤖 ChatGPT"
+    type: select
+    proxies: ["🇭🇰 香港节点", "🇺🇸 美国节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇼🇸 台湾节点", "🇰🇷 韩国节点", "🇨🇦 加拿大节点", "🇬🇧 英国节点", "🇫🇷 法国节点", "🇩🇪 德国节点", "🇳🇱 荷兰节点", "🇹🇷 土耳其节点", "🏠 家宽节点", "🌐 其他地区", "🚀 手动选择", "♻️ 自动选择"]
+    include-all: true
+  - name: "🤖 Copilot"
+    type: select
+    proxies: ["🇭🇰 香港节点", "🇺🇸 美国节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇼🇸 台湾节点", "🇰🇷 韩国节点", "🇨🇦 加拿大节点", "🇬🇧 英国节点", "🇫🇷 法国节点", "🇩🇪 德国节点", "🇳🇱 荷兰节点", "🇹🇷 土耳其节点", "🏠 家宽节点", "🌐 其他地区", "🚀 手动选择", "♻️ 自动选择", "🎯 全球直连"]
+    include-all: true
+  - name: "🤖 AI服务"
+    type: select
+    proxies: ["🇭🇰 香港节点", "🇺🇸 美国节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇼🇸 台湾节点", "🇰🇷 韩国节点", "🇨🇦 加拿大节点", "🇬🇧 英国节点", "🇫🇷 法国节点", "🇩🇪 德国节点", "🇳🇱 荷兰节点", "🇹🇷 土耳其节点", "🏠 家宽节点", "🌐 其他地区", "🚀 手动选择", "♻️ 自动选择"]
+    include-all: true
+  - name: "🎶 TikTok"
+    type: select
+    proxies: ["🇭🇰 香港节点", "🇺🇸 美国节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇼🇸 台湾节点", "🇰🇷 韩国节点", "🇨🇦 加拿大节点", "🇬🇧 英国节点", "🇫🇷 法国节点", "🇩🇪 德国节点", "🇳🇱 荷兰节点", "🇹🇷 土耳其节点", "🏠 家宽节点", "🌐 其他地区", "🚀 手动选择", "♻️ 自动选择", "🎯 全球直连"]
+    include-all: true
+  - name: "📹 YouTube"
+    type: select
+    proxies: ["🇸🇬 新加坡节点", "🇭🇰 香港节点", "🇺🇸 美国节点", "🇯🇵 日本节点", "🇼🇸 台湾节点", "🇰🇷 韩国节点", "🇨🇦 加拿大节点", "🇬🇧 英国节点", "🇫🇷 法国节点", "🇩🇪 德国节点", "🇳🇱 荷兰节点", "🇹🇷 土耳其节点", "🏠 家宽节点", "🌐 其他地区", "🚀 手动选择", "♻️ 自动选择"]
+    include-all: true
+  - name: "🎥 Netflix"
+    type: select
+    proxies: ["🇸🇬 新加坡节点", "🇭🇰 香港节点", "🇺🇸 美国节点", "🇯🇵 日本节点", "🇼🇸 台湾节点", "🇰🇷 韩国节点", "🇨🇦 加拿大节点", "🇬🇧 英国节点", "🇫🇷 法国节点", "🇩🇪 德国节点", "🇳🇱 荷兰节点", "🇹🇷 土耳其节点", "🏠 家宽节点", "🌐 其他地区", "🚀 手动选择", "♻️ 自动选择"]
+    include-all: true
+  - name: "🎥 DisneyPlus"
+    type: select
+    proxies: ["🇸🇬 新加坡节点", "🇭🇰 香港节点", "🇺🇸 美国节点", "🇯🇵 日本节点", "🇼🇸 台湾节点", "🇰🇷 韩国节点", "🇨🇦 加拿大节点", "🇬🇧 英国节点", "🇫🇷 法国节点", "🇩🇪 德国节点", "🇳🇱 荷兰节点", "🇹🇷 土耳其节点", "🏠 家宽节点", "🌐 其他地区", "🚀 手动选择", "♻️ 自动选择"]
+    include-all: true
+  - name: "🎥 HBO"
+    type: select
+    proxies: ["🇸🇬 新加坡节点", "🇭🇰 香港节点", "🇺🇸 美国节点", "🇯🇵 日本节点", "🇼🇸 台湾节点", "🇰🇷 韩国节点", "🇨🇦 加拿大节点", "🇬🇧 英国节点", "🇫🇷 法国节点", "🇩🇪 德国节点", "🇳🇱 荷兰节点", "🇹🇷 土耳其节点", "🏠 家宽节点", "🌐 其他地区", "🚀 手动选择", "♻️ 自动选择", "🎯 全球直连"]
+    include-all: true
+  - name: "🎥 PrimeVideo"
+    type: select
+    proxies: ["🇸🇬 新加坡节点", "🇭🇰 香港节点", "🇺🇸 美国节点", "🇯🇵 日本节点", "🇼🇸 台湾节点", "🇰🇷 韩国节点", "🇨🇦 加拿大节点", "🇬🇧 英国节点", "🇫🇷 法国节点", "🇩🇪 德国节点", "🇳🇱 荷兰节点", "🇹🇷 土耳其节点", "🏠 家宽节点", "🌐 其他地区", "🚀 手动选择", "♻️ 自动选择", "🎯 全球直连"]
+    include-all: true
+  - name: "🎥 AppleTV+"
+    type: select
+    proxies: ["🇸🇬 新加坡节点", "🇭🇰 香港节点", "🇺🇸 美国节点", "🇯🇵 日本节点", "🇼🇸 台湾节点", "🇰🇷 韩国节点", "🇨🇦 加拿大节点", "🇬🇧 英国节点", "🇫🇷 法国节点", "🇩🇪 德国节点", "🇳🇱 荷兰节点", "🇹🇷 土耳其节点", "🏠 家宽节点", "🌐 其他地区", "🚀 手动选择", "♻️ 自动选择", "🎯 全球直连"]
+    include-all: true
+  - name: "🎥 Emby"
+    type: select
+    proxies: ["🇭🇰 香港节点", "🇺🇸 美国节点", "🇯🇵 日本节点", "🇼🇸 台湾节点", "🇰🇷 韩国节点", "🇨🇦 加拿大节点", "🇬🇧 英国节点", "🇫🇷 法国节点", "🇩🇪 德国节点", "🇳🇱 荷兰节点", "🇹🇷 土耳其节点", "🏠 家宽节点", "🌐 其他地区", "🚀 手动选择", "♻️ 自动选择", "🎯 全球直连"]
+    include-all: true
+  - name: "🎻 Spotify"
+    type: select
+    proxies: ["🇭🇰 香港节点", "🇺🇸 美国节点", "🇯🇵 日本节点", "🇼🇸 台湾节点", "🇰🇷 韩国节点", "🇨🇦 加拿大节点", "🇬🇧 英国节点", "🇫🇷 法国节点", "🇩🇪 德国节点", "🇳🇱 荷兰节点", "🇹🇷 土耳其节点", "🏠 家宽节点", "🌐 其他地区", "🚀 手动选择", "♻️ 自动选择", "🎯 全球直连"]
+    include-all: true
+  - name: "📺 Bahamut"
+    type: select
+    proxies: ["🇼🇸 台湾节点", "🚀 手动选择", "🎯 全球直连"]
+  - name: "🌎 国外媒体"
+    type: select
+    proxies: ["🇸🇬 新加坡节点", "🇭🇰 香港节点", "🇺🇸 美国节点", "🇯🇵 日本节点", "🇼🇸 台湾节点", "🇰🇷 韩国节点", "🇨🇦 加拿大节点", "🇬🇧 英国节点", "🇫🇷 法国节点", "🇩🇪 德国节点", "🇳🇱 荷兰节点", "🇹🇷 土耳其节点", "🏠 家宽节点", "🌐 其他地区", "🚀 手动选择", "♻️ 自动选择", "🎯 全球直连"]
+    include-all: true
+  - name: "💳 PayPal"
+    type: select
+    proxies: ["🇭🇰 香港节点", "🇺🇸 美国节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇼🇸 台湾节点", "🇰🇷 韩国节点", "🇨🇦 加拿大节点", "🇬🇧 英国节点", "🇫🇷 法国节点", "🇩🇪 德国节点", "🇳🇱 荷兰节点", "🇹🇷 土耳其节点", "🏠 家宽节点", "🌐 其他地区", "🚀 手动选择", "♻️ 自动选择", "🎯 全球直连"]
+    include-all: true
+  - name: "🛒 国外电商"
+    type: select
+    proxies: ["🇭🇰 香港节点", "🇺🇸 美国节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇼🇸 台湾节点", "🇰🇷 韩国节点", "🇨🇦 加拿大节点", "🇬🇧 英国节点", "🇫🇷 法国节点", "🇩🇪 德国节点", "🇳🇱 荷兰节点", "🇹🇷 土耳其节点", "🏠 家宽节点", "🌐 其他地区", "🚀 手动选择", "♻️ 自动选择", "🎯 全球直连"]
+    include-all: true
+  - name: "📢 谷歌FCM"
+    type: select
+    proxies: ["🇭🇰 香港节点", "🇺🇸 美国节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇼🇸 台湾节点", "🇰🇷 韩国节点", "🇨🇦 加拿大节点", "🇬🇧 英国节点", "🇫🇷 法国节点", "🇩🇪 德国节点", "🇳🇱 荷兰节点", "🇹🇷 土耳其节点", "🏠 家宽节点", "🌐 其他地区", "🚀 手动选择", "♻️ 自动选择", "🎯 全球直连"]
+  - name: "🇬 谷歌服务"
+    type: select
+    proxies: ["🇭🇰 香港节点", "🇺🇸 美国节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇼🇸 台湾节点", "🇰🇷 韩国节点", "🇨🇦 加拿大节点", "🇬🇧 英国节点", "🇫🇷 法国节点", "🇩🇪 德国节点", "🇳🇱 荷兰节点", "🇹🇷 土耳其节点", "🏠 家宽节点", "🌐 其他地区", "🚀 手动选择", "♻️ 自动选择", "🎯 全球直连"]
+  - name: "🍎 苹果服务"
+    type: select
+    proxies: ["🎯 全球直连", "🇭🇰 香港节点", "🇺🇸 美国节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇼🇸 台湾节点", "🇰🇷 韩国节点", "🇨🇦 加拿大节点", "🇬🇧 英国节点", "🇫🇷 法国节点", "🇩🇪 德国节点", "🇳🇱 荷兰节点", "🇹🇷 土耳其节点", "🏠 家宽节点", "🌐 其他地区", "🚀 手动选择", "♻️ 自动选择"]
+  - name: "Ⓜ️ 微软服务"
+    type: select
+    proxies: ["🎯 全球直连", "🇭🇰 香港节点", "🇺🇸 美国节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇼🇸 台湾节点", "🇰🇷 韩国节点", "🇨🇦 加拿大节点", "🇬🇧 英国节点", "🇫🇷 法国节点", "🇩🇪 德国节点", "🇳🇱 荷兰节点", "🇹🇷 土耳其节点", "🏠 家宽节点", "🌐 其他地区", "🚀 手动选择", "♻️ 自动选择"]
+  - name: "💾 OneDrive"
+    type: select
+    proxies: ["🎯 全球直连", "🇭🇰 香港节点", "🇺🇸 美国节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇼🇸 台湾节点", "🇰🇷 韩国节点", "🇨🇦 加拿大节点", "🇬🇧 英国节点", "🇫🇷 法国节点", "🇩🇪 德国节点", "🇳🇱 荷兰节点", "🇹🇷 土耳其节点", "🏠 家宽节点", "🌐 其他地区", "🚀 手动选择", "♻️ 自动选择"]
+  - name: "🎮 游戏平台"
+    type: select
+    proxies: ["🎯 全球直连", "🇭🇰 香港节点", "🇺🇸 美国节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇼🇸 台湾节点", "🇰🇷 韩国节点", "🇨🇦 加拿大节点", "🇬🇧 英国节点", "🇫🇷 法国节点", "🇩🇪 德国节点", "🇳🇱 荷兰节点", "🇹🇷 土耳其节点", "🏠 家宽节点", "🌐 其他地区", "🚀 手动选择", "♻️ 自动选择"]
+  - name: "🎮 Steam"
+    type: select
+    proxies: ["🎯 全球直连", "🇭🇰 香港节点", "🇺🇸 美国节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇼🇸 台湾节点", "🇰🇷 韩国节点", "🇨🇦 加拿大节点", "🇬🇧 英国节点", "🇫🇷 法国节点", "🇩🇪 德国节点", "🇳🇱 荷兰节点", "🇹🇷 土耳其节点", "🏠 家宽节点", "🌐 其他地区", "🚀 手动选择", "♻️ 自动选择"]
+    include-all: true
+  - name: "⏬ PT站点"
+    type: select
+    proxies: ["🇭🇰 香港节点", "🇺🇸 美国节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇼🇸 台湾节点", "🇰🇷 韩国节点", "🇨🇦 加拿大节点", "🇬🇧 英国节点", "🇫🇷 法国节点", "🇩🇪 德国节点", "🇳🇱 荷兰节点", "🇹🇷 土耳其节点", "🏠 家宽节点", "🌐 其他地区", "🚀 手动选择", "♻️ 自动选择", "🎯 全球直连"]
+    include-all: true
+  - name: "🚀 测速工具"
+    type: select
+    proxies: ["🎯 全球直连", "🇭🇰 香港节点", "🇺🇸 美国节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇼🇸 台湾节点", "🇰🇷 韩国节点", "🇨🇦 加拿大节点", "🇬🇧 英国节点", "🇫🇷 法国节点", "🇩🇪 德国节点", "🇳🇱 荷兰节点", "🇹🇷 土耳其节点", "🏠 家宽节点", "🌐 其他地区", "🚀 手动选择", "♻️ 自动选择"]
+    include-all: true
+  - name: "🐟 漏网之鱼"
+    type: select
+    proxies: ["🇭🇰 香港节点", "🇺🇸 美国节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇼🇸 台湾节点", "🇰🇷 韩国节点", "🇨🇦 加拿大节点", "🇬🇧 英国节点", "🇫🇷 法国节点", "🇩🇪 德国节点", "🇳🇱 荷兰节点", "🇹🇷 土耳其节点", "🏠 家宽节点", "🌐 其他地区", "🚀 手动选择", "♻️ 自动选择", "🎯 全球直连"]
+    include-all: true
+  - name: "甲骨文云"
+    type: select
+    proxies: ["DIRECT"]
+    include-all: true
+    filter: "(?i)oracle"
+  - name: "TK1"
+    type: select
+    proxies: ["DIRECT"]
+    include-all: true
+  - name: "TK2"
+    type: select
+    proxies: ["DIRECT"]
+    include-all: true
+  - name: "TK3"
+    type: select
+    proxies: ["DIRECT"]
+    include-all: true
+  - name: "TK4"
+    type: select
+    proxies: ["DIRECT"]
+    include-all: true
+  - name: "🇭🇰 香港节点"
+    type: url-test
+    include-all: true
+    filter: "(港|HK|hk|Hong Kong|HongKong|hongkong|深港)"
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 300
+    tolerance: 50
+  - name: "🇺🇸 美国节点"
+    type: url-test
+    include-all: true
+    filter: "(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States|UnitedStates)"
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 300
+    tolerance: 50
+  - name: "🇯🇵 日本节点"
+    type: url-test
+    include-all: true
+    filter: "(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan|🇯🇵)"
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 300
+    tolerance: 50
+  - name: "🇸🇬 新加坡节点"
+    type: url-test
+    include-all: true
+    filter: "(新加坡|坡|狮城|SG|Singapore)"
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 300
+    tolerance: 50
+  - name: "🇼🇸 台湾节点"
+    type: url-test
+    include-all: true
+    filter: "(台|新北|彰化|TW|Taiwan)"
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 300
+    tolerance: 50
+  - name: "🇰🇷 韩国节点"
+    type: url-test
+    include-all: true
+    filter: "(KR|Korea|KOR|首尔|韩|韓)"
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 300
+    tolerance: 50
+  - name: "🇨🇦 加拿大节点"
+    type: url-test
+    include-all: true
+    filter: "(加拿大|Canada|渥太华|温哥华|卡尔加里)"
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 300
+    tolerance: 50
+  - name: "🇬🇧 英国节点"
+    type: url-test
+    include-all: true
+    filter: "(英国|Great Britain)"
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 300
+    tolerance: 50
+  - name: "🇫🇷 法国节点"
+    type: url-test
+    include-all: true
+    filter: "(法国|France|巴黎)"
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 300
+    tolerance: 50
+  - name: "🇩🇪 德国节点"
+    type: url-test
+    include-all: true
+    filter: "(德国|Germany|柏林|法兰克福)"
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 300
+    tolerance: 50
+  - name: "🇳🇱 荷兰节点"
+    type: url-test
+    include-all: true
+    filter: "(荷兰|Netherlands|阿姆斯特丹)"
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 300
+    tolerance: 50
+  - name: "🌐 其他地区"
+    type: url-test
+    include-all: true
+    filter: "(^(?!.*(港|HK|hk|Hong Kong|HongKong|hongkong|深港|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States|UnitedStates|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan|🇯🇵|新加坡|坡|狮城|SG|Singapore|台|新北|彰化|TW|Taiwan|KR|Korea|KOR|首尔|韩|韓|加拿大|Canada|渥太华|温哥华|卡尔加里|英国|Great Britain|法国|France|巴黎|德国|Germany|柏林|法兰克福|荷兰|Netherlands|阿姆斯特丹|土耳其|Turkey|Türkiye)).*)"
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 300
+    tolerance: 50
+  - name: "🏠 家宽节点"
+    type: url-test
+    include-all: true
+    filter: "(家宽|家庭宽带|住宅)"
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 300
+    tolerance: 50
+  - name: "🇹🇷 土耳其节点"
+    type: url-test
+    include-all: true
+    filter: "(土耳其|TR|Turkey|Istanbul|伊斯坦布尔|安卡拉)"
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 300
+    tolerance: 50
+  - name: "🇭🇰 香港家宽"
+    type: url-test
+    include-all: true
+    filter: ".*(HK|hk|Hong Kong|HongKong|家宽|Residential).*"
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 300
+    tolerance: 50
+  - name: "🎯 全球直连"
+    type: select
+    proxies: ["DIRECT"]
+
+rule-providers:
+  Custom_Direct:
+    type: http
+    behavior: classical
+    format: text
+    url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct.list"
+    path: ./rule_provider/Custom_Direct.list
+    interval: 28800
+  Custom_Proxy:
+    type: http
+    behavior: classical
+    format: text
+    url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy.list"
+    path: ./rule_provider/Custom_Proxy.list
+    interval: 28800
+  Steam_CDN:
+    type: http
+    behavior: classical
+    format: text
+    url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Steam_CDN.list"
+    path: ./rule_provider/Steam_CDN.list
+    interval: 28800
+
+rules:
+  - "GEOSITE,private,🎯 全球直连"
+  - "GEOIP,private,🎯 全球直连,no-resolve"
+  - "RULE-SET,Custom_Direct,🎯 全球直连"
+  - "RULE-SET,Custom_Proxy,🚀 手动选择"
+  - "GEOSITE,google-cn,🎯 全球直连"
+  - "GEOSITE,category-games@cn,🎯 全球直连"
+  - "RULE-SET,Steam_CDN,🎯 全球直连"
+  - "GEOSITE,category-game-platforms-download,🎯 全球直连"
+  - "GEOSITE,category-public-tracker,🎯 全球直连"
+  - "GEOSITE,category-communication,💬 即时通讯"
+  - "GEOSITE,category-social-media-!cn,🌐 社交媒体"
+  - "GEOSITE,talkatone,📞 Talkatone"
+  - "GEOSITE,openai,🤖 ChatGPT"
+  - "GEOSITE,onedrive,💾 OneDrive"
+  - "GEOSITE,bing,🤖 Copilot"
+  - "GEOSITE,category-ai-!cn,🤖 AI服务"
+  - "GEOSITE,github,🚀 GitHub"
+  - "GEOSITE,category-speedtest,🚀 测速工具"
+  - "GEOSITE,youtube,📹 YouTube"
+  - "GEOSITE,apple-tvplus,🎥 AppleTV+"
+  - "GEOSITE,apple,🍎 苹果服务"
+  - "GEOSITE,microsoft,Ⓜ️ 微软服务"
+  - "GEOSITE,googlefcm,📢 谷歌FCM"
+  - "GEOSITE,google,🇬 谷歌服务"
+  - "GEOSITE,tiktok,🎶 TikTok"
+  - "GEOSITE,netflix,🎥 Netflix"
+  - "GEOSITE,disney,🎥 DisneyPlus"
+  - "GEOSITE,hbo,🎥 HBO"
+  - "GEOSITE,primevideo,🎥 PrimeVideo"
+  - "GEOSITE,category-emby,🎥 Emby"
+  - "GEOSITE,spotify,🎻 Spotify"
+  - "GEOSITE,bahamut,📺 Bahamut"
+  - "GEOSITE,steam,🎮 Steam"
+  - "GEOSITE,category-games,🎮 游戏平台"
+  - "GEOSITE,category-entertainment,🌎 国外媒体"
+  - "GEOSITE,category-pt,⏬ PT站点"
+  - "GEOSITE,paypal,💳 PayPal"
+  - "GEOSITE,category-ecommerce,🛒 国外电商"
+  - "GEOSITE,gfw,🚀 手动选择"
+  - "GEOIP,telegram,💬 即时通讯,no-resolve"
+  - "GEOIP,twitter,🌐 社交媒体,no-resolve"
+  - "GEOIP,facebook,🌐 社交媒体,no-resolve"
+  - "GEOIP,google,🇬 谷歌服务,no-resolve"
+  - "GEOIP,netflix,🎥 Netflix,no-resolve"
+  - "GEOSITE,cn,🎯 全球直连"
+  - "GEOIP,cn,🎯 全球直连,no-resolve"
+  - "MATCH,🐟 漏网之鱼"
