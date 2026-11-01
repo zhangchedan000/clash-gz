@@ -94,6 +94,22 @@ def add_auto(groups):
     return groups
 
 
+def split_auto(groups):
+    """小火箭/圈X 的自动测速组不能手动点节点。国家组（带筛选的自动组）拆成两个：
+    同名的手动组（第一项是「xx自动」子组，下面是这个国家的全部节点）+ 自动子组，两种模式都能用。
+    要在 add_auto 之后调用，国家组里不加「♻️ 自动选择」。"""
+    manual, autos = [], []
+    for g in groups:
+        if g["type"] == "url-test" and g.get("filter"):
+            name = g["name"].replace("节点", "自动") if "节点" in g["name"] else g["name"] + "自动"
+            autos.append(dict(g, name=name))
+            manual.append({"name": g["name"], "type": "select", "proxies": [name],
+                           "include_all": True, "filter": g["filter"]})
+        else:
+            manual.append(g)
+    return manual + autos
+
+
 def group_line(g):
     parts = [g["type"]]
     if g["type"] == "url-test":
@@ -154,7 +170,7 @@ def convert(text, extra=None):
         if key not in seen:
             seen.add(key)
             deduped.append(r)
-    groups = add_auto(groups)
+    groups = split_auto(add_auto(groups))
     head = (["# ---- 自定义规则（openclash-rules/rules.yaml）----"] + extra_rules(extra)
             + ["# ---- 模板规则 ----"]) if extra else []
     out = [GENERAL, "[Proxy Group]"] + [group_line(g) for g in groups]
