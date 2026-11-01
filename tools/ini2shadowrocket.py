@@ -80,19 +80,18 @@ update-url = https://example.invalid/replaced-by-sub-store
 """
 
 
-def split_auto(groups):
-    """小火箭/圈X 的自动测速组不能手动点节点。带筛选的自动组（地区组）拆成两个：
-    同名的手动组（第一项是自动子组，下面是这个地区的全部节点）+ 自动子组，两种模式都能用。"""
-    manual, autos = [], []
+AUTO = "♻️ 自动选择"
+
+
+def add_auto(groups):
+    """国家组以外的手动组都加上「♻️ 自动选择」（放第二项，第一项仍是原来的默认）：
+    想自动就选它，想固定就直接点节点。只有全球直连这种纯直连的组不加。"""
     for g in groups:
-        if g["type"] == "url-test" and g.get("filter"):
-            name = g["name"].replace("节点", "自动") if "节点" in g["name"] else g["name"] + "自动"
-            autos.append(dict(g, name=name))
-            manual.append({"name": g["name"], "type": "select", "proxies": [name],
-                           "include_all": True, "filter": g["filter"]})
-        else:
-            manual.append(g)
-    return manual + autos
+        p = g.get("proxies", [])
+        if g["type"] == "select" and AUTO not in p and (
+                g.get("include_all") or any(x not in ("DIRECT", "REJECT") for x in p)):
+            g["proxies"] = p[:1] + [AUTO] + p[1:]
+    return groups
 
 
 def group_line(g):
@@ -155,7 +154,7 @@ def convert(text, extra=None):
         if key not in seen:
             seen.add(key)
             deduped.append(r)
-    groups = split_auto(groups)
+    groups = add_auto(groups)
     head = (["# ---- 自定义规则（openclash-rules/rules.yaml）----"] + extra_rules(extra)
             + ["# ---- 模板规则 ----"]) if extra else []
     out = [GENERAL, "[Proxy Group]"] + [group_line(g) for g in groups]
