@@ -13,7 +13,7 @@ import urllib.request
 from pathlib import Path
 
 from ini2mihomo import parse_group
-from ini2shadowrocket import GEOIP, GEOSITE, INLINE, add_auto, split_auto
+from ini2shadowrocket import GEOIP, GEOSITE, INLINE, split_auto
 
 BM = "https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/{0}/{0}.list"
 SELF = "https://testingcf.jsdelivr.net/gh/zhangchedan000/clash-gz@main/qx/{0}.list"
@@ -132,7 +132,7 @@ def convert(text):
             deduped.append(f)
     # FINAL 必须在最后
     local.sort(key=lambda r: r.startswith("FINAL"))
-    groups = split_auto(add_auto(groups))
+    groups = split_auto(groups)
     out = [GENERAL, "[policy]"] + [policy_line(g) for g in groups]
     # 圈X要求这些段落都存在，空的也要写上
     out += ["", "[server_local]", "", "[server_remote]", "", "[filter_remote]"] + deduped
