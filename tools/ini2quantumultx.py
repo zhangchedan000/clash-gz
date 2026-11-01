@@ -52,15 +52,21 @@ def policy(name):
 
 
 def split_auto(groups):
-    """圈X 的自动测速组（url-latency-benchmark）里不能手动点节点。国家组拆成两个：
-    同名的手动组（第一项是「xx自动」子组，下面是这个国家的全部节点）+ 自动子组，两种模式都能用。"""
+    """圈X 的自动测速组（url-latency-benchmark）里不能手动点节点。每个自动组都拆成两个：
+    同名的手动组（第一项是自动子组，下面是它范围内的全部节点）+ 自动子组，两种模式都能用。
+    这样所有分组里都能手动点节点。"""
     manual, autos = [], []
     for g in groups:
-        if g["type"] == "url-test" and g.get("filter"):
-            name = g["name"].replace("节点", "自动") if "节点" in g["name"] else g["name"] + "自动"
+        if g["type"] == "url-test":
+            if "节点" in g["name"]:
+                name = g["name"].replace("节点", "自动")
+            elif g["name"].endswith("自动选择"):
+                name = g["name"].replace("自动选择", "自动测速")
+            else:
+                name = g["name"] + "自动"
             autos.append(dict(g, name=name))
             manual.append({"name": g["name"], "type": "select", "proxies": [name],
-                           "include_all": True, "filter": g["filter"]})
+                           "include_all": True, "filter": g.get("filter", ".*")})
         else:
             manual.append(g)
     return manual + autos
