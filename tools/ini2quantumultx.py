@@ -51,6 +51,21 @@ def policy(name):
     return name.lower() if name.upper() in ("DIRECT", "REJECT") else name
 
 
+def split_auto(groups):
+    """圈X 的自动测速组（url-latency-benchmark）里不能手动点节点。国家组拆成两个：
+    同名的手动组（第一项是「xx自动」子组，下面是这个国家的全部节点）+ 自动子组，两种模式都能用。"""
+    manual, autos = [], []
+    for g in groups:
+        if g["type"] == "url-test" and g.get("filter"):
+            name = g["name"].replace("节点", "自动") if "节点" in g["name"] else g["name"] + "自动"
+            autos.append(dict(g, name=name))
+            manual.append({"name": g["name"], "type": "select", "proxies": [name],
+                           "include_all": True, "filter": g["filter"]})
+        else:
+            manual.append(g)
+    return manual + autos
+
+
 def policy_line(g):
     regex = g.get("filter", ".*") if g.get("include_all") else None
     if g["type"] == "url-test":
@@ -132,6 +147,7 @@ def convert(text):
             deduped.append(f)
     # FINAL 必须在最后
     local.sort(key=lambda r: r.startswith("FINAL"))
+    groups = split_auto(groups)
     out = [GENERAL, "[policy]"] + [policy_line(g) for g in groups]
     # 圈X要求这些段落都存在，空的也要写上
     out += ["", "[server_local]", "", "[server_remote]", "", "[filter_remote]"] + deduped
