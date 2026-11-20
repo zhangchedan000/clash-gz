@@ -33,14 +33,6 @@ HOST-SUFFIX,registry.dockermirror.com,Custom_Direct
 HOST-SUFFIX,hf-mirror.com,Custom_Direct
 HOST-KEYWORD,synology,Custom_Direct
 HOST-KEYWORD,quickconnect,Custom_Direct
-HOST-SUFFIX,checkip.dyndns.org,Custom_Direct
-HOST-SUFFIX,checkipv6.dyndns.org,Custom_Direct
-HOST-SUFFIX,ifconfig.co,Custom_Direct
-HOST-SUFFIX,api.myip.com,Custom_Direct
-HOST-SUFFIX,giveup.top,Custom_Direct
-HOST-SUFFIX,ipapi.co,Custom_Direct
-HOST-SUFFIX,ip6.seeip.org,Custom_Direct
-HOST-SUFFIX,kit327.com,Custom_Direct
 HOST-SUFFIX,members.3322.org,Custom_Direct
 HOST-SUFFIX,msftconnecttest.com,Custom_Direct
 HOST-SUFFIX,msftncsi.com,Custom_Direct
@@ -155,6 +147,10 @@ HOST-SUFFIX,terrabbs.ink,Custom_Direct
 HOST-SUFFIX,yingshi.dog,Custom_Direct
 HOST-SUFFIX,code-relay.com,Custom_Direct
 HOST-SUFFIX,ahlt10010.com,Custom_Direct
+HOST-SUFFIX,yuanqidesk3.com,Custom_Direct
+HOST-SUFFIX,icitycdn.com,Custom_Direct
+HOST-SUFFIX,webportal.top,Custom_Direct
+HOST-SUFFIX,yueyouqu.com,Custom_Direct
 HOST-SUFFIX,znigddzwz.cc,Custom_Direct
 HOST-SUFFIX,kanv7k.live,Custom_Direct
 HOST-SUFFIX,visaselectrewardhk.com,Custom_Direct
